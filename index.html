@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<title>Netflix and chill</title>
+<link href="css/reset.css" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/video-js.css" rel="stylesheet" />
+
+<body>
+
+    <header>
+    
+    <div class="gridhead">
+        <div class="fadeIn"> <img src="/assets/img/netflix logo.png" alt="netflix logo"></div>
+            <div class="menu">
+             <nav>
+                <ul class="nav-ul">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li> <img id="logicon" src="/assets/img/login.png" alt="logicon"><a id="LOG" href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+        <div id="bspromo" class="blacksquare">
+            <div class="gridwarp-promo clearfix">
+
+                    <h1>A NETFLIX ORIGINAL</h1>
+                    <h3 id="head-h3">Something strange is<br>
+                         happening in Hawkins </h3>
+                    <p>Fusce dapibus, tellus ac cursus commodo, <br>
+                        tortor mauris condimentum nibh, ut <br>
+                        fermentum massa justo sit amet risus. Cras <br>
+                        mattis consectetur purus sit amet <br>
+                        fermentum.</p>
+
+                    <div id="h-signbutton">
+                        <h4 id="h-text">Try Free</h4>
+                    </div>
+
+                    <button id="modalButton" onclick="doModal(event)"> <img id="modalplay" src="./assets/img/Play.png" alt="modalplay"> </button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close" onclick="doClose(event)">&times;</span>
+                            <div class="video-player">
+                                <button id="modalRewind" onclick="rewind()" type="button">R</button>
+                                <button id="modalForward" onclick="forward()" type="button">F</button>
+                               
+                                <video
+                                    id="my-video"
+                                    class="video-js vjs-big-play-centered"
+                                    controls
+                                    preload="auto"
+                                    width="640"
+                                    height="264"
+                                    allowfullscreen="false"
+                                    autoplay                                       
+                                    data-setup="{}"
+                                >
+                                    <source src="https://player.vimeo.com/external/435441132.sd.mp4?s=26f82038e36c5ff9852520def245b15a5e189564&profile_id=165" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="whitesquare clearfix">
+            <h1 id="videored">Stop doing stuff, start watching</h1>
+            <h3 id="whitehead">200+ of the best shows,<br>
+                waiting to be watched</h3>
+
+            <div class="video-player">
+                <iframe class="videoschaal1" src="https://player.vimeo.com/external/435441132.sd.mp4?s=26f82038e36c5ff9852520def245b15a5e189564&profile_id=165" width="640" height="480"
+                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-player">
+                <iframe class="videoschaal1" src="https://player.vimeo.com/external/435456507.sd.mp4?s=3c1ae12b507cff09bab3825363b4f45115bfd9ee&profile_id=165" width="520" height="360"
+                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-player">
+                <iframe class="videoschaal1" src="https://player.vimeo.com/external/435458185.sd.mp4?s=2a37e07117c3ddd4f9cbb6c810d90c54f4ea1749&profile_id=164" width="520" height="360"
+                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+
+
+            <p id="blackp">
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris <br>
+                condimentum nibh, ut fermentum massa justo sit amet risus. Cras <br>
+                mattis consectetur purus sit amet fermentum.
+            </p>
+
+            <div class="signbutton">
+                <h4>Try Free</h4>
+            </div>
+        </div>
+
+        <div id="bottombs" class="blacksquare">
+            <h3 id="blackhead">Choose the plan that’s right for you</h3>
+
+                <div class="tab">
+                    <button class="tablinks" onclick="choosePlan(event, 'Basic')">
+                        <h3>Basic</h3>
+                    </button>
+                    <button class="tablinks" onclick="choosePlan(event, 'Standard')">
+                        <h3>Standard</h3>
+                    </button>
+                    <button class="tablinks" onclick="choosePlan(event, 'Premium')">
+                        <h3>Premium</h3>
+                    </button>
+                </div>
+
+
+            <div id="Basic" class="tabcontent clearfix">
+                <p class="left">Monthly price<br>
+                    Video Quality<br>
+                    Resolution<br>
+                    Screens<br>
+                    Unlimited films and TV<br>
+                    Cancel at any time
+                </p>
+                <p class="right">&euro; 7,99<br>
+                    Good<br>
+                    1080p<br>
+                    2<br>
+                    <img id="check" src="./assets/img/check.png" alt="check">
+                    <br>
+                    <img id="check" src="./assets/img/check.png" alt="check">
+                </p>
+                <div id="tabsignbutton">
+                    <h4>Pick This Plan</h4>
+                </div>
+                <h4 id="endmes">downgrade or upgrade at any time</h4>
+            </div>
+
+            <div id="Standard" class="tabcontent clearfix">
+                <p class="left">Monthly price<br>
+                    Video Quality<br>
+                    Resolution<br>
+                    Screens<br>
+                    Unlimited films and TV<br>
+                    Cancel at any time
+                </p>
+                <p class="right">&euro; 10,99<br>
+                    Good<br>
+                    1080p<br>
+                    3<br>
+                    <img id="check" src="./assets/img/check.png" alt="check">
+                    <br>
+                    <img id="check" src="./assets/img/check.png" alt="check">
+                </p>
+                <div id="tabsignbutton">
+                    <h4>Pick This Plan</h4>
+                </div>
+                <h4 id="endmes">downgrade or upgrade at any time</h4>
+            </div>
+
+            <div id="Premium" class="tabcontent clearfix">
+                <p class="left">Monthly price<br>
+                    Video Quality<br>
+                    Resolution<br>
+                    Screens<br>
+                    Unlimited films and TV<br>
+                    Cancel at any time
+                </p>
+                <p class="right">&euro; 13,99<br>
+                    Best<br>
+                    4K+HDR<br>
+                    4 <br>
+                    <img id="check" src="./assets/img/check.png" alt="check">
+                    <br>
+                    <img id="check" src="./assets/img/check.png" alt="check">
+                </p>
+                <div id="tabsignbutton">
+                    <h4>Pick This Plan</h4>
+                </div>
+                <h4 id="endmes">downgrade or upgrade at any time</h4>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        function choosePlan(evt, cityName) {
+
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+
+        function doModal(evt) {
+            // Get the modalbutton   
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function doClose(evt) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        var player = videojs('my-video', {
+            controlBar: {
+                captionsButton: false,
+                chaptersButton: false,            
+                subtitlesButton: false,
+                remainingTimeDisplay: true,
+                volumePanel: false,
+                progressControl: {
+                seekBar: true
+                },
+                fullscreenToggle: false,
+                playbackRateMenuButton: false,
+            },
+        });
+
+        function seek(vidPlayer, secs)
+        {            
+            let time = vidPlayer.currentTime() + secs;
+            if(time < 0){
+                time = 0;
+            }
+            if(time > vidPlayer.duration){
+                time = vidPlayer.duration;
+            }
+            vidPlayer.currentTime(time);
+        }
+
+        function rewind() { 
+            this.seek(player, -10);        
+        } 
+
+        function forward() { 
+            this.seek(player, 10);
+        } 
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+        }
+
+</script>
+
+</body>
+
+</html>
